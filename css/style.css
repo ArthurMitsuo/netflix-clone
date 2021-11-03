@@ -1,0 +1,284 @@
+:root{
+    --vermelho: #E50914;
+    --branco: #fff;
+    --preto: #141414;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    
+}
+body{
+    background-color: var(--preto);
+}
+
+.container__upper-header{
+    position: fixed;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--preto);
+    color: var(--branco);
+   z-index: 3;
+}
+.upper-flex-container {
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container{
+    padding-left: 50px;
+}
+.container-left-header{
+    align-items: center;
+    display: flex;
+}
+.upper-logo{
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .3px;
+    color: var(--vermelho);
+}
+.nav-container{
+    margin-left: 20px;
+}
+.link-nav{
+    all: unset;
+    margin: 0 5px;
+    font-size:.8rem;
+    text-transform: capitalize;
+}
+
+.container-right-header{
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+
+.item-right{
+    margin: 0 10px;
+}
+.avatar{
+    width: 30px;
+    height: auto;
+}
+
+.main-img{
+    height: 500px;
+    width: 100%;
+    
+}
+.image-container{
+    background-image: url("/assets/nissim.jpg");
+    height: 500px;
+    background-size: cover;
+    
+}
+.filter-img{
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, .95) 100%);
+    height: 100%;
+    align-items: center;
+    
+}
+.meme-content{
+    display:flex;
+    flex-direction:column;
+    height: 100%;
+    width: 550px;
+    justify-content: center;
+    padding-top: 100px;
+    position: relative;
+}
+.container-btn{
+    margin-top: 20px;
+}
+.meme-title{
+    font-size: 2.5rem;
+    color: var(--branco);
+    letter-spacing: 1px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+.meme-subtitle{
+    color: var(--branco);
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+}
+.btn{
+    height: 48px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 0 15px;
+    cursor:pointer;
+}
+.btn-assistir{
+    background-color: var(--branco);
+    margin-right: 30px;
+}
+.btn-assistir::before{
+    content:'';
+    background: url("/assets/play-solid.svg");
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+}
+.btn-assistir:hover{
+    background-color: rgb(187, 184, 184);
+}
+.btn-info{
+    color: var(--branco);
+    background-color: rgba(94, 93, 93, 0.418);
+}
+.btn-info::before{
+    content: "";
+    background: url("/assets/info-solid.svg");
+    background-repeat: no-repeat;
+    color: var(--branco);
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.btn-info:hover{
+    background-color: rgba(94, 93, 93, 0.226);
+}
+.container-play{
+    width: 100%;
+    text-align:center;
+    transition: ease 1s;
+    background-color: var(--preto);
+}
+.hidden{
+    display:none;
+
+    transition: ease 1s;
+}
+
+.tem{
+    overflow: hidden;
+}
+.img-meme{
+    height: 200px;
+    width: auto;
+    position:relative;
+}
+.item h4{
+    position:absolute;
+    bottom: 0;
+
+    height: 40px;
+    width: 100%;
+    background: linear-gradient(rgba(34, 34, 34, 0.205) 0%, rgba(0, 0, 0, 0.829) 100%);
+    color: var(--branco);
+    font-weight: 200;
+    padding-left: 5px;
+}
+.carousel{
+    margin-bottom: 20px;
+}
+
+.info{
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 10px;
+    background-color: var(--preto);
+    border: 2px solid var(--branco);
+    border-radius: 10px;
+    
+    position: absolute;
+    top: 100px;
+    right: 5%;
+    left: 5%;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.letra{
+    color: var(--branco);
+    font-size: .9rem;
+}
+.carousel-title{
+    font-size: 1.5rem;
+    color: var(--branco);
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 1000px){
+    .container-left-header{
+        flex-direction: column;
+    }
+    .container__upper-header{
+        height: 4rem;
+    }
+    .container-right-header{
+        width: 150px;
+        height: 100%;
+        justify-content: flex-start;
+    }
+    .upper-flex-container{
+        justify-content: flex-start;
+
+        width: 90%;
+    }
+    .container-btn{
+        display:flex;
+        flex-direction: column;
+    }
+    .btn{
+        margin-top: 15px;
+        width: 260px;
+    }
+    .image-container{
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .meme-content{
+        width: 90%;
+    }
+    .filter-img{
+        padding-top: 70px;
+    }
+}
+@media screen and (max-width: 475px){
+    .container{
+        padding-left: 10px;
+    }
+    .container-left-header{
+        width: 100%;
+    }
+    .nav-container{
+        width: 100%;
+    
+        padding:0;
+    }
+    .container__upper-header {
+        height: 8rem;
+    }
+    .upper-flex-container{
+        flex-direction: column;
+        width: 100%;
+    }
+    .container-right-header{
+        justify-content: space-around;
+        width: 80%;
+        margin: auto;
+    }
+}
